@@ -37,32 +37,32 @@
 
         if (salario <= 280) {
             console.log('O seu aumento será de 20%.');
-            console.log('Salário: ' + salario);
+            console.log('Salário: ' + 'R$ ' +  salario.toFixed(2));
             let aumento = salario * 0.20
-            console.log('20% do Salário: ' + aumento);
+            console.log('20% do Salário: ' + 'R$ ' +  aumento.toFixed(2));
             let novo_salario = salario + aumento;
-            console.log('Total :' + novo_salario);
+            console.log('Total :' + 'R$ ' +  novo_salario.toFixed(2));
         } else if (salario < 700) {
             console.log('O seu aumento será de 15%.');
-            console.log('Salário: ' + salario);
+            console.log('Salário: ' + 'R$ ' +  salario.toFixed(2));
             let aumento = salario * 0.15
-            console.log('15% do Salário: ' + aumento);
+            console.log('15% do Salário: ' + 'R$ ' +  aumento.toFixed(2));
             let novo_salario = salario + aumento;
-            console.log('Total :' + novo_salario);
+            console.log('Total :' + 'R$ ' +  novo_salario.toFixed(2));
         } else if ( salario < 1500) {
             console.log('O seu aumento será de 10%.');
-            console.log('Salário: ' + salario);
+            console.log('Salário: ' + 'R$ ' +  salario.toFixed(2));
             let aumento = salario * 0.10
-            console.log('10% do Salário: ' + aumento);
+            console.log('10% do Salário: ' + 'R$ ' +  aumento.toFixed(2));
             let novo_salario = salario + aumento;
-            console.log('Total :' + novo_salario);
+            console.log('Total :' + 'R$ ' +  novo_salario);
         } else {
             console.log('O seu aumento será de 5%.');
-            console.log('Salário: ' + salario);
+            console.log('Salário: ' + 'R$ ' + salario.toFixed(2));
             let aumento = salario * 0.05
-            console.log('5% do Salário: ' + aumento);
+            console.log('5% do Salário: ' + 'R$ ' +  aumento.toFixed(2));
             let novo_salario = salario + aumento;
-            console.log('Total :' + novo_salario);
+            console.log('Total :' + 'R$ ' +  novo_salario.toFixed(2));
         }
 
         console.log('___________Fixação 3______________');
@@ -74,34 +74,34 @@
                 return isento;
             } else if (valor_bruto <= 1500) {
                 let ir5 = valor_bruto * 0.05;
-                console.log('Ir 5%: ' + 'R$ : ' + ir5.toFixed(2));
+                console.log('Ir 5%: ' + 'R$ ' + ir5.toFixed(2));
                 return ir5;
             } else if (valor_bruto <= 2500) {
                 let ir10 = valor_bruto * 0.1;
-                console.log('Ir 10%: ' + 'R$ : ' + ir10.toFixed(2));
+                console.log('Ir 10%: ' + 'R$ ' + ir10.toFixed(2));
                 return ir10;
             } else {
                 let ir20 = valor_bruto * 0.20;
-                console.log('Ir 20%: ' + 'R$ : ' + ir20.toFixed(2));
+                console.log('Ir 20%: ' + 'R$ ' + ir20.toFixed(2));
                 return ir20;
             }
         }
 
         function inss (valor_bruto) {
             let inss_desconto = valor_bruto * 0.10;
-            console.log('Inss 10%: ' + 'R$ : ' + inss_desconto.toFixed(2))
+            console.log('Inss 10%: ' + 'R$ ' + inss_desconto.toFixed(2))
             return inss_desconto;
         }
 
         function fgts (valor_bruto) {
             let fgts_desconto = valor_bruto * 0.11;
-            console.log('Fgts 11%: ' + 'R$ : ' + fgts_desconto.toFixed(2));
+            console.log('Fgts 11%: ' + 'R$ ' + fgts_desconto.toFixed(2));
             return fgts_desconto;
         }
 
         function desconto (ir, inss) {
             desconto_total = ir_final + inss_final;
-            console.log('Total de descontos: ' + 'R$ : ' + desconto_total.toFixed(2));
+            console.log('Total de descontos: ' + 'R$ ' + desconto_total.toFixed(2));
             return desconto_total;
         }
 
@@ -110,12 +110,12 @@
         let salario_bruto = salario_liquido(parseFloat(hora * valor_da_hora));
 
         function salario_liquido (salario_bruto) {
-            console.log('Salario bruto: ' + salario_bruto.toFixed(2) + ' (' + hora + ' * ' + valor_da_hora + ')');
+            console.log('Salario bruto: ' + 'R$ ' + salario_bruto.toFixed(2) + ' (' + hora + ' * ' + valor_da_hora + ')');
             ir_final = ir (parseFloat(salario_bruto));
             inss_final = inss (parseFloat(salario_bruto));
             fgts_final = fgts (parseFloat(salario_bruto));
             desconto_final = desconto (ir + inss);
-            return console.log('Salario líquido: ' + 'R$ : ' + (salario_bruto - desconto_final).toFixed(2));
+            return console.log('Salario líquido: ' + 'R$ ' + (salario_bruto - desconto_final).toFixed(2));
         }
 
 
